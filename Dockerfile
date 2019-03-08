@@ -16,5 +16,6 @@ ENV PYTHONPATH /ansible/lib
 ENV PATH /ansible/bin:$PATH
 ENV ANSIBLE_LIBRARY /ansible/library
  
-WORKDIR /ansible/playbooks
- 
+WORKDIR /projects
+
+CMD ["/bin/bash"] 
