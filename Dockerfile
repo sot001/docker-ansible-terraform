@@ -3,7 +3,7 @@ FROM sot001/python-base:latest
 ENV TERRAFORM_VERSION=0.11.11
 
 RUN apk add --update-cache ansible \
-  && pip install awscli boto boto3 \
+  && pip3.6 install awscli boto boto3 \
   && rm -rf /var/cache/apk/* \
   && wget -O /tmp/terraform_${TERRAFORM_VERSION}_linux_amd64.zip https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip \
   && unzip -d /usr/local/bin/ /tmp/terraform_${TERRAFORM_VERSION}_linux_amd64.zip
